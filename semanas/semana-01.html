@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Semana 01 · Cuaderno | Ivette Andrade</title>
+    <meta name="description" content="Bitácora Semana 01 — Introducción y fundamentos del desarrollo web. Ingrid Andrade." />
+    <title>Semana 01 · Cuaderno | Ingrid Andrade</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,86 +16,77 @@
   <body>
     <header class="navbar">
       <nav class="nav container">
-        <a href="../index.html" class="logo">IA<span>.</span></a>
-        <a
-          href="../index.html#bitacora"
-          class="btn btn-ghost"
-          style="padding: 6px 16px; font-size: 0.85rem"
-          >← Volver a Cuaderno</a
-        >
+        <a href="../index.html" class="logo" aria-label="Volver al inicio">IA<span>.</span></a>
+        <a href="../index.html#bitacora" class="btn btn-ghost btn-sm">← Volver al Cuaderno</a>
       </nav>
     </header>
 
     <main class="container section">
       <div class="section-head">
-        <h2>Semana 01: Introducción y Fundamentos Web</h2>
-        <span class="section-line"></span>
+        <h1>Semana 01: Introducción y Fundamentos Web</h1>
+        <span class="section-line" aria-hidden="true"></span>
       </div>
 
-      <article
-        class="experience-card"
-        style="flex-direction: column; gap: 20px"
-      >
-        <span class="exp-place">Bitácora de Aprendizaje</span>
+      <article class="experience-card log-entry">
+        <p class="exp-place">Bitácora de Aprendizaje · <time datetime="2026-08">Agosto 2026</time></p>
 
-        <div>
-          <h3 style="color: var(--pink); margin-bottom: 8px">
-            Temas tratados:
-          </h3>
+        <section class="log-block">
+          <h3>Temas tratados</h3>
           <p>
             Conceptos fundamentales del desarrollo web: Frontend, Backend, uso
             de GitHub para control de versiones y la diferencia clave entre un
             sitio web y una aplicación web.
           </p>
-        </div>
+        </section>
 
-        <div>
-          <h3 style="color: var(--pink); margin-bottom: 8px">¿Qué aprendí?</h3>
-          <ul
-            style="
-              list-style-type: disc;
-              padding-left: 20px;
-              color: var(--muted);
-              display: flex;
-              flex-direction: column;
-              gap: 8px;
-            "
-          >
+        <section class="log-block">
+          <h3>¿Qué aprendí?</h3>
+          <ul class="log-list">
             <li>
-              <strong>Frontend vs. Backend:</strong> El Frontend se encarga de
+              <strong>Frontend vs. Backend:</strong> el Frontend se encarga de
               la interfaz visual, el diseño y la interacción con el usuario en
               el navegador, mientras que el Backend maneja la lógica de negocio,
               servidores y bases de datos.
             </li>
             <li>
-              <strong>Sitio Web vs. Aplicación Web:</strong> Un
-              <em>sitio web</em> está diseñado para adaptarse responsivamente a
-              cualquier tipo de dispositivo (escritorio, laptop, tablet, móvil),
-              manteniendo la coherencia. En cambio, una
-              <em>aplicación web</em> o nativa puede estar optimizada para un
-              dispositivo específico, modificando drásticamente su
-              comportamiento o disponibilidad al cambiar de pantalla o
-              plataforma.
+              <strong>Sitio Web vs. Aplicación Web:</strong> un
+              <em>sitio web</em> se adapta responsivamente a cualquier
+              dispositivo manteniendo la coherencia, mientras que una
+              <em>aplicación web</em> puede optimizarse para un contexto
+              específico, con comportamiento o funcionalidades que varían según
+              la plataforma.
             </li>
             <li>
-              <strong>GitHub y Control de Versiones:</strong> Aprendí la
-              importancia de gestionar repositorios en GitHub para dar
-              seguimiento al desarrollo del proyecto de forma ordenada mediante
-              commits.
+              <strong>GitHub y control de versiones:</strong> la importancia de
+              gestionar repositorios para dar seguimiento ordenado al desarrollo
+              del proyecto mediante commits.
             </li>
           </ul>
-        </div>
+        </section>
 
-        <div>
-          <h3 style="color: var(--pink); margin-bottom: 8px">
-            Laboratorio / Práctica:
-          </h3>
+        <section class="log-block">
+          <h3>Laboratorio / Práctica</h3>
           <p>
             Configuración inicial del entorno de trabajo, creación del
             repositorio en GitHub y estructuración del portafolio principal
             junto con el cuaderno de bitácora.
           </p>
-        </div>
+        </section>
+
+        <!-- EVIDENCIAS: descomenta y agrega tus capturas en semanas/img/ -->
+        <section class="log-block">
+          <h3>Evidencias</h3>
+          <div class="log-gallery">
+            <figure>
+              <img src="img/s1-repo.png" alt="Repositorio creado en GitHub" loading="lazy" />
+              <figcaption>Repositorio inicial en GitHub</figcaption>
+            </figure>
+            <figure>
+              <img src="img/s1-entorno.png" alt="Entorno de trabajo en VS Code" loading="lazy" />
+              <figcaption>Entorno configurado en VS Code</figcaption>
+            </figure>
+          </div>
+        </section>
       </article>
     </main>
 
