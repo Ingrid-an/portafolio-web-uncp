@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bitácora Semana 06 — Enrutamiento, consumo de APIs, formularios y comunicación de componentes en React. Ingrid Andrade."
+    />
+    <title>Semana 06 · Cuaderno | Ingrid Andrade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <nav class="nav container">
+        <a href="../index.html" class="logo" aria-label="Volver al inicio"
+          >IA<span>.</span></a
+        >
+        <a href="../index.html#bitacora" class="btn btn-ghost btn-sm"
+          >← Volver al Cuaderno</a
+        >
+      </nav>
+    </header>
+
+    <main class="container section">
+      <div class="section-head">
+        <h1>
+          Semana 06: Framework JS — Enrutamiento, Consumo de APIs, Formularios y
+          Comunicación de Componentes
+        </h1>
+        <span class="section-line" aria-hidden="true"></span>
+      </div>
+
+      <article class="experience-card log-entry">
+        <p class="exp-place">
+          Bitácora de Aprendizaje · <time datetime="2026-10">Octubre 2026</time>
+        </p>
+
+        <section class="log-block">
+          <h3>Temas tratados</h3>
+          <p>
+            Desarrollo de Single Page Applications (SPA) basadas en componentes
+            en React, jerarquía y comunicación entre componentes (padres, hijos
+            y hermanos), enrutamiento del lado del cliente sin recarga con React
+            Router DOM, formularios controlados con estado local
+            (<em>useState</em>) y consumo de APIs asíncronas con Axios
+            (<em>async/await</em>).
+          </p>
+        </section>
+
+        <section class="log-block">
+          <h3>¿Qué aprendí?</h3>
+          <ul class="log-list">
+            <li>
+              <strong
+                >Comunicación entre Componentes (Padres, Hijos y
+                Hermanos):</strong
+              >
+              paso de datos descendente (<em>Prop Drilling</em>), elevación de
+              estado (<em>Lifting State Up</em> mediante funciones callback de
+              hijo a padre) y comunicación entre componentes hermanos a través
+              de su componente padre común.
+            </li>
+            <li>
+              <strong>Client-Side Routing:</strong> implementación de navegación
+              fluida con <em>&lt;BrowserRouter&gt;</em>,
+              <em>&lt;Routes&gt;</em>, <em>&lt;Route&gt;</em> y el uso de
+              <em>&lt;NavLink&gt;</em> con clases activas dinámicas
+              (<em>isActive</em>).
+            </li>
+            <li>
+              <strong>Consumo de APIs con Axios y Async/Await:</strong>
+              peticiones HTTP asíncronas mediante bloques
+              <em>try/catch/finally</em>, manejo explícito de estados de UI (<em
+                >loading, data, error</em
+              >) y uso de <em>AbortController</em> para limpieza en
+              <em>useEffect</em> y prevención de duplicidad.
+            </li>
+            <li>
+              <strong
+                >Renderizado Iterativo, Condicional y Formularios
+                Controlados:</strong
+              >
+              renderizado dinámico de listas con <em>.map()</em> y
+              <em>key</em> únicas, operadores condicionales
+              (<em>&amp;&amp;</em>, ternario) y control de inputs en tiempo real
+              con <em>useState</em> y eventos <em>onChange/onSubmit</em>.
+            </li>
+          </ul>
+        </section>
+
+        <section class="log-block">
+          <h3>Laboratorio / Práctica</h3>
+          <ul class="log-list">
+            <li>
+              <strong>Práctica Individual (Guía Semana 06):</strong> desarrollo
+              de una SPA modular con vistas enrutadas (<em>Home</em>,
+              <em>List</em> con consumo de API, <em>Form</em> controlado y
+              <em>NotFound</em> 404).
+            </li>
+            <li>
+              <strong>Práctica de Comunicación y Maquetación:</strong>
+              ejercicios de maquetación responsiva en 7 secciones, anidación en
+              4 niveles y flujos de datos bidireccionales entre componentes.
+            </li>
+          </ul>
+        </section>
+
+        <section class="log-block">
+          <h3>Herramientas y Validaciones</h3>
+          <ul class="log-list">
+            <li>
+              <strong>Node.js LTS</strong> y <strong>Vite + React.</strong>
+            </li>
+            <li>
+              <strong>React Router DOM v6</strong> y <strong>Axios.</strong>
+            </li>
+            <li>
+              <strong>JSONPlaceholder / DummyJSON</strong> como APIs de prueba.
+            </li>
+            <li>
+              <strong>DevTools Network Tab</strong> y <strong>GitHub.</strong>
+            </li>
+          </ul>
+        </section>
+
+        <!-- EVIDENCIAS: reemplaza las imágenes en img/ -->
+        <section class="log-block">
+          <h3>Evidencias</h3>
+          <div class="log-gallery">
+            <figure>
+              <img
+                src="img/s6-spa.png"
+                alt="SPA con vistas enrutadas"
+                loading="lazy"
+              />
+              <figcaption>SPA modular con React Router</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="img/s6-api.png"
+                alt="Consumo de API con Axios"
+                loading="lazy"
+              />
+              <figcaption>Vista List con consumo de API (Axios)</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="img/s6-form.png"
+                alt="Formulario controlado"
+                loading="lazy"
+              />
+              <figcaption>Formulario controlado con useState</figcaption>
+            </figure>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a href="../index.html" class="to-top">Volver al inicio ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>

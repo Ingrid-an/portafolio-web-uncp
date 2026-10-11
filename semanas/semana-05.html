@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bitácora Semana 05 — Ecosistema React: entornos, props, children y estilado. Ingrid Andrade."
+    />
+    <title>Semana 05 · Cuaderno | Ingrid Andrade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <nav class="nav container">
+        <a href="../index.html" class="logo" aria-label="Volver al inicio"
+          >IA<span>.</span></a
+        >
+        <a href="../index.html#bitacora" class="btn btn-ghost btn-sm"
+          >← Volver al Cuaderno</a
+        >
+      </nav>
+    </header>
+
+    <main class="container section">
+      <div class="section-head">
+        <h1>
+          Semana 05: Ecosistema React, Múltiples Entornos (CRA, Vite, Next.js),
+          Props, Children y Estilado
+        </h1>
+        <span class="section-line" aria-hidden="true"></span>
+      </div>
+
+      <article class="experience-card log-entry">
+        <p class="exp-place">
+          Bitácora de Aprendizaje ·
+          <time datetime="2026-09">Septiembre 2026</time>
+        </p>
+
+        <section class="log-block">
+          <h3>Temas tratados</h3>
+          <p>
+            Configuración y comparativa de tres entornos de desarrollo
+            diferentes en React (Create React App, Vite y Next.js), arquitectura
+            de componentes funcionales, flujo de datos unidireccional con props
+            y composición mediante children, estrategias de estilado (CSS
+            Modules) e inspección del comportamiento Client-Side Rendering
+            (CSR).
+          </p>
+        </section>
+
+        <section class="log-block">
+          <h3>¿Qué aprendí?</h3>
+          <ul class="log-list">
+            <li>
+              <strong>Creación de Entornos Múltiples:</strong> despliegue y
+              verificación de tres formas de inicializar React (Create React App
+              con Webpack, Vite con HMR ultrarrápido y Next.js para producción).
+            </li>
+            <li>
+              <strong>Arquitectura de Componentes:</strong> estructuración de
+              <em>App.jsx</em> como orquestador limpio, delegando
+              responsabilidades a componentes hijos.
+            </li>
+            <li>
+              <strong>Flujo de Datos (Props y Children):</strong> transmisión de
+              datos inmutables de padre a hijo mediante props y composición
+              flexible anidando elementos JSX con <em>props.children</em>.
+            </li>
+            <li>
+              <strong>Estrategias de Estilado:</strong> aplicación de CSS
+              Modules (<em>*.module.css</em>) para aislar estilos de componentes
+              y evitar colisiones globales en la cascada.
+            </li>
+            <li>
+              <strong>Validación de CSR y Ciclo de Render:</strong> análisis del
+              HTML inicial con un
+              <em>&lt;div id="root"&gt;&lt;/div&gt;</em> vacío y el proceso de
+              hidratación del DOM en el navegador con React DevTools.
+            </li>
+          </ul>
+        </section>
+
+        <section class="log-block">
+          <h3>Laboratorio / Práctica</h3>
+          <ul class="log-list">
+            <li>
+              <strong>Práctica Individual:</strong> creación de la SPA "Refugio
+              de Patitas" integrando componentes contenedores
+              (<em>DashboardShelter</em>), tarjetas reutilizables
+              (<em>PetCard</em>) mapeadas con <em>.map()</em>, y estilado con
+              CSS Modules.
+            </li>
+            <li>
+              <strong>Práctica de Validación CSR:</strong> auditoría de red y
+              componentes mediante DevTools para verificar la inyección dinámica
+              del bundle de JavaScript.
+            </li>
+          </ul>
+        </section>
+
+        <section class="log-block">
+          <h3>Herramientas y Validaciones</h3>
+          <ul class="log-list">
+            <li>
+              <strong>Create React App, Vite</strong> y
+              <strong>Next.js.</strong>
+            </li>
+            <li><strong>CSS Modules</strong> para estilado aislado.</li>
+            <li><strong>React Developer Tools.</strong></li>
+            <li><strong>VS Code</strong> y <strong>GitHub.</strong></li>
+          </ul>
+        </section>
+
+        <!-- EVIDENCIAS: reemplaza las imágenes en img/ -->
+        <section class="log-block">
+          <h3>Evidencias</h3>
+          <div class="log-gallery">
+            <figure>
+              <img
+                src="img/s5-refugio.png"
+                alt="SPA Refugio de Patitas en React"
+                loading="lazy"
+              />
+              <figcaption>SPA "Refugio de Patitas"</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="img/s5-entornos.png"
+                alt="Comparativa CRA, Vite y Next.js"
+                loading="lazy"
+              />
+              <figcaption>Tres entornos: CRA, Vite y Next.js</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="img/s5-devtools.png"
+                alt="Validación CSR con React DevTools"
+                loading="lazy"
+              />
+              <figcaption>Validación CSR con React DevTools</figcaption>
+            </figure>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a href="../index.html" class="to-top">Volver al inicio ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
