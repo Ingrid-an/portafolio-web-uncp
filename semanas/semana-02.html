@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bitácora Semana 02 — Maquetación avanzada, accesibilidad y layouts modernos. Ingrid Andrade."
+    />
+    <title>Semana 02 · Cuaderno | Ingrid Andrade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <nav class="nav container">
+        <a href="../index.html" class="logo" aria-label="Volver al inicio"
+          >IA<span>.</span></a
+        >
+        <a href="../index.html#bitacora" class="btn btn-ghost btn-sm"
+          >← Volver al Cuaderno</a
+        >
+      </nav>
+    </header>
+
+    <main class="container section">
+      <div class="section-head">
+        <h1>
+          Semana 02: Maquetación Avanzada, Accesibilidad y Layouts Modernos
+        </h1>
+        <span class="section-line" aria-hidden="true"></span>
+      </div>
+
+      <article class="experience-card log-entry">
+        <p class="exp-place">
+          Bitácora de Aprendizaje · <time datetime="2026-08">Agosto 2026</time>
+        </p>
+
+        <section class="log-block">
+          <h3>Temas tratados</h3>
+          <p>
+            Estructuración con HTML5 semántico y ARIA, accesibilidad web (A11y),
+            diseños híbridos con CSS Grid y Flexbox, layout estilo Masonry puro
+            en CSS, tipografía fluida y adaptación a preferencias del usuario
+            (modo oscuro/claro y movimiento reducido).
+          </p>
+        </section>
+
+        <section class="log-block">
+          <h3>¿Qué aprendí?</h3>
+          <ul class="log-list">
+            <li>
+              <strong>Accesibilidad Web (A11y) y ARIA:</strong> importancia de
+              implementar atributos como <em>role</em>, <em>aria-label</em> y
+              enlaces de salto (<em>skip-links</em>) para garantizar la
+              navegación por teclado y lectores de pantalla cumpliendo
+              estándares WCAG AA.
+            </li>
+            <li>
+              <strong>Layouts Híbridos (Grid + Flexbox) y Masonry:</strong>
+              combinación de CSS Grid y Flexbox para layouts complejos y
+              creación de galerías tipo Masonry sin necesidad de JavaScript
+              usando <em>columns</em> y <em>break-inside</em>.
+            </li>
+            <li>
+              <strong>CSS Moderno y Adaptabilidad:</strong> uso de funciones
+              dinámicas como <em>clamp()</em>, <em>calc()</em> y variables CSS
+              para tipografía fluida, junto con <em>prefers-color-scheme</em> y
+              <em>prefers-reduced-motion</em>.
+            </li>
+          </ul>
+        </section>
+
+        <section class="log-block">
+          <h3>Laboratorio / Práctica</h3>
+          <ul class="log-list">
+            <li>
+              <strong>Práctica Individual:</strong> Galería de Proyectos
+              Técnicos totalmente responsiva con breakpoints en <em>rem</em>,
+              alto contraste accesible y soporte navegable por teclado.
+            </li>
+            <li>
+              <strong>Práctica Grupal:</strong> refuerzo y auditoría de la
+              galería en equipo dividiendo roles especializados (HTML/A11y/SEO y
+              CSS/Layout/Debug).
+            </li>
+          </ul>
+        </section>
+
+        <section class="log-block">
+          <h3>Herramientas y Validaciones</h3>
+          <ul class="log-list">
+            <li><strong>W3C Validator:</strong> 0 errores de estructura.</li>
+            <li>
+              <strong>WAVE Extension:</strong> contraste y estructura accesible.
+            </li>
+            <li>
+              <strong>Lighthouse:</strong> puntaje ≥90 en Accesibilidad y SEO.
+            </li>
+            <li><strong>VS Code</strong> y <strong>GitHub.</strong></li>
+          </ul>
+        </section>
+
+        <!-- EVIDENCIAS: reemplaza las imágenes en semanas/img/ -->
+        <section class="log-block">
+          <h3>Evidencias</h3>
+          <div class="log-gallery">
+            <figure>
+              <img
+                src="img/s2-galeria.png"
+                alt="Galería de proyectos responsiva"
+                loading="lazy"
+              />
+              <figcaption>Galería de Proyectos responsiva</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="img/s2-wave.png"
+                alt="Auditoría de accesibilidad con WAVE"
+                loading="lazy"
+              />
+              <figcaption>Auditoría WAVE — 0 errores de contraste</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="img/s2-lighthouse.png"
+                alt="Resultado de Lighthouse"
+                loading="lazy"
+              />
+              <figcaption>Lighthouse ≥90 en Accesibilidad y SEO</figcaption>
+            </figure>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a href="../index.html" class="to-top">Volver al inicio ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
