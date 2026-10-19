@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bitácora Semana 07 — React Hooks y manejo de estado en aplicaciones SPA. Ingrid Andrade."
+    />
+    <title>Semana 07 · Cuaderno | Ingrid Andrade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <nav class="nav container">
+        <a href="../index.html" class="logo" aria-label="Volver al inicio"
+          >IA<span>.</span></a
+        >
+        <a href="../index.html#bitacora" class="btn btn-ghost btn-sm"
+          >← Volver al Cuaderno</a
+        >
+      </nav>
+    </header>
+
+    <main class="container section">
+      <div class="section-head">
+        <h1>Semana 07: React Hooks y Manejo de Estado en Aplicaciones SPA</h1>
+        <span class="section-line" aria-hidden="true"></span>
+      </div>
+
+      <article class="experience-card log-entry">
+        <p class="exp-place">
+          Bitácora de Aprendizaje · <time datetime="2026-10">Octubre 2026</time>
+        </p>
+
+        <section class="log-block">
+          <h3>Temas tratados</h3>
+          <p>
+            Semana centrada en React Hooks y manejo de estado en SPA. Inició con
+            la Evaluación Parcial (React + Vite + TypeScript + LocalStorage) y
+            continuó con las dos partes de la Guía Práctica 07:
+            <em>useState</em>, <em>useEffect</em>, <em>useContext</em>,
+            <em>useRef</em>, <em>useReducer</em>, <em>useCallback</em>,
+            <em>useMemo</em> y Hooks personalizados.
+          </p>
+        </section>
+
+        <section class="log-block">
+          <h3>¿Qué aprendí?</h3>
+          <ul class="log-list">
+            <li>
+              <strong>Ciclo de render y StrictMode:</strong> un array de
+              dependencias vacío <em>[]</em> en <em>useEffect</em> no significa
+              "se ejecuta una sola vez" en StrictMode; por eso el
+              <em>cleanup</em> es obligatorio para evitar peticiones duplicadas
+              y fugas de memoria.
+            </li>
+            <li>
+              <strong>Re-render condicional:</strong> si el nuevo estado es
+              igual al anterior (<em>Object.is</em>), React no vuelve a
+              renderizar.
+            </li>
+            <li>
+              <strong>useReducer vs. useState:</strong> el reducer concentra
+              toda la lógica de cambios en una función pura e inmutable, más
+              fácil de probar y explicar que varios <em>useState</em> sueltos.
+            </li>
+            <li>
+              <strong>Optimización sin overuse:</strong> <em>useCallback</em>
+              solo tiene sentido cuando la función se pasa a un hijo memoizado
+              con
+              <em>React.memo</em>; <em>useMemo</em> evita recalcular filtros u
+              ordenamientos si sus dependencias no cambiaron.
+            </li>
+            <li>
+              <strong>Hooks personalizados:</strong> un hook propio
+              (<em>useFetch</em>, <em>useLocalStorage</em>) extrae la lógica
+              repetida del componente y la vuelve reutilizable, respetando las
+              reglas de los Hooks.
+            </li>
+            <li>
+              <strong>Trabajo en equipo con Git:</strong> conviene hacer commit
+              antes del pull, crear una rama de respaldo y saber deshacer con
+              <em>git merge --abort</em> o <em>git reset --hard ORIG_HEAD</em>.
+            </li>
+          </ul>
+        </section>
+
+        <section class="log-block">
+          <h3>Laboratorio / Práctica</h3>
+          <ul class="log-list">
+            <li>
+              <strong
+                >Evaluación Parcial — Sistema de Biblioteca Universitaria (en
+                equipo, React + Vite + TypeScript):</strong
+              >
+              desarrollé el Módulo 1, Gestión de categorías y libros en
+              <em>Inventario.tsx</em>: CRUD con validaciones (ISBN de 10/13
+              dígitos sin repetir, stock ≥ 0, categorías únicas), componentes
+              reutilizables (<em>InputField</em>, <em>SelectField</em>,
+              <em>TextAreaField</em>), tablas responsivas con buscador,
+              persistencia en LocalStorage con type guards y la función
+              <em>actualizarStock()</em> para el módulo de Préstamos.
+            </li>
+            <li>
+              <strong>Guía 07, Parte 1 — "SoundWave":</strong>
+              catálogo de música y podcasts con reproductor y control de volumen
+              (<em>useReducer</em> + <em>useRef</em>), novedades desde una API
+              pública con estados de carga/éxito/error (<em>useEffect</em> +
+              async/await + <em>AbortController</em>), tema Modo
+              Estudio/Concierto (<em>useContext</em>), catálogo de 5000
+              canciones con buscador (<em>useMemo</em>, <em>useCallback</em>) y
+              el hook <em>useFetch</em>.
+            </li>
+            <li>
+              <strong
+                >Guía 07, Parte 2 — Dashboard de Gestión con Estado
+                Complejo:</strong
+              >
+              dashboard de tareas con KPIs, dona por categoría y barras, usando
+              <em>useReducer</em> (acciones ADD, REMOVE, TOGGLE, FILTER, SORT),
+              <em>ThemeContext</em> sincronizado con localStorage,
+              <em>useMemo</em>, <em>useCallback</em> + <em>React.memo</em>,
+              <em>useRef</em> y el hook <em>useLocalStorage</em>.
+            </li>
+          </ul>
+        </section>
+
+        <section class="log-block">
+          <h3>Herramientas y Validaciones</h3>
+          <ul class="log-list">
+            <li>
+              <strong>Herramientas:</strong> Node.js, Vite, React 19,
+              TypeScript, react-router-dom, lucide-react, VS Code, Git y GitHub,
+              React DevTools (Components y Profiler), ESLint con
+              eslint-plugin-react-hooks, y las APIs JSONPlaceholder y DummyJSON.
+            </li>
+            <li>
+              <strong>ESLint:</strong> <em>npm run lint</em> con
+              <em>react-hooks/exhaustive-deps</em> en error y
+              <em>--max-warnings 0</em> → 0 warnings.
+            </li>
+            <li>
+              <strong>Profiler:</strong> al marcar una tarea solo se
+              re-renderiza esa fila; el resto aparece como "did not render"
+              gracias a React.memo + useCallback.
+            </li>
+            <li>
+              <strong>Cleanup y persistencia:</strong> la petición anterior
+              aparece como (canceled) al cambiar rápido de acción, los listeners
+              no se duplican, y tareas, tema, borrador e inventario se mantienen
+              al recargar (verificable en F12 → Application → Local Storage).
+            </li>
+          </ul>
+        </section>
+
+        <!-- EVIDENCIAS: repositorios reales + placeholders de capturas -->
+        <section class="log-block">
+          <h3>Evidencias</h3>
+
+          <p style="color: var(--muted); margin-bottom: 14px">
+            <strong style="color: var(--text)">Repositorios en GitHub:</strong>
+          </p>
+          <ul class="log-list" style="margin-bottom: 22px">
+            <li>
+              <strong>Biblioteca Universitaria (equipo):</strong>
+              <a
+                class="link-mini"
+                href="https://github.com/josuewho10/biblioteca-universitaria"
+                target="_blank"
+                rel="noopener"
+              >
+                github.com/josuewho10/biblioteca-universitaria</a
+              >
+              — rama <em>andrade-inventario</em>, con Pull Request a main.
+            </li>
+            <li>
+              <strong>SoundWave (individual):</strong>
+              <a
+                class="link-mini"
+                href="https://github.com/Ingrid-an/Semana7_Practica"
+                target="_blank"
+                rel="noopener"
+              >
+                github.com/Ingrid-an/Semana7_Practica</a
+              >
+            </li>
+            <li>
+              <strong>Dashboard:</strong> repositorio con README que incluye
+              diagrama de flujo de estado, diagrama del ciclo de render
+              (Mermaid) y la justificación de cada hook.
+            </li>
+          </ul>
+
+          <div class="log-gallery">
+            <figure>
+              <img
+                src="img/s7-soundwave.png"
+                alt="App SoundWave de música"
+                loading="lazy"
+              />
+              <figcaption>SoundWave — catálogo con hooks</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="img/s7-dashboard.png"
+                alt="Dashboard de gestión de tareas"
+                loading="lazy"
+              />
+              <figcaption>
+                Dashboard con estado complejo (useReducer)
+              </figcaption>
+            </figure>
+            <figure>
+              <img
+                src="img/s7-biblioteca.png"
+                alt="Módulo de inventario de biblioteca"
+                loading="lazy"
+              />
+              <figcaption>Módulo Inventario — Biblioteca</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="img/s7-eslint.png"
+                alt="ESLint 0 warnings"
+                loading="lazy"
+              />
+              <figcaption>ESLint: 0 warnings</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="img/s7-profiler.png"
+                alt="React Profiler re-render selectivo"
+                loading="lazy"
+              />
+              <figcaption>Profiler — re-render selectivo</figcaption>
+            </figure>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a href="../index.html" class="to-top">Volver al inicio ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
